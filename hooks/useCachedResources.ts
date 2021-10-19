@@ -16,6 +16,13 @@ export default function useCachedResources() {
         await Font.loadAsync({
           ...FontAwesome.font,
           'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
+          'MPLUSRounded1c-Black': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Black.ttf'),
+          'MPLUSRounded1c-Bold': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Bold.ttf'),
+          'MPLUSRounded1c-ExtraBold': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-ExtraBold.ttf'),
+          'MPLUSRounded1c-Light': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf'),
+          'MPLUSRounded1c-Medium': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Medium.ttf'),
+          'MPLUSRounded1c-Regular': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf'),
+          'MPLUSRounded1c-Thin': require('../assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Thin.ttf')
         });
       } catch (e) {
         // We might want to provide this error information to an error reporting service

@@ -7,33 +7,54 @@ import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
 export default function EditScreenInfo({ path }: { path: string }) {
-  return (
-    <View>
-      <View style={styles.getStartedContainer}>
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Emanuel Acevedo Muñoz
-        </Text>
-        <Text>
-        Digital Craftsman ( Artist / Developer / Designer )
-        </Text>
-        <Image  />
-      </View>
-    </View>
-  );
+    return (
+        <View style={{
+            backgroundColor: 'red'
+        }}>
+            <View style={styles.getStartedContainer}>
+                <View>
+                    <Text
+                        style={{
+                            fontFamily: 'MPLUSRounded1c-Bold',
+                            fontSize: 36,
+                            // lineHeight: 24,
+                            textAlign: 'center',
+                            color: '#1A202C'
+                        }}>
+                        Emanuel Acevedo Muñoz
+                    </Text>
+                    <Text>
+                        Digital Craftsman ( Artist / Developer / Designer )
+                    </Text>
+                </View>
+                <View>
+                    <Image
+                        style={{
+                            backgroundColor: 'red',
+                            width: 100,
+                            height: 100,
+                            borderRadius: 100,
+                            borderWidth: 2,
+                            borderColor: 'white'
+                        }}
+                        source={require('../assets/images/personal/EmanuelAcevedo.jpeg')}
+                    />
+                </View>
+            </View>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-    backgroundColor: 'brown'
-  },
-  getStartedText: {
-    fontSize: 17,
-    lineHeight: 24,
-    textAlign: 'center',
-  },
+    getStartedContainer: {
+        alignItems: 'center',
+        marginHorizontal: 50,
+        flexDirection: 'row',
+    },
+    getStartedText: {
+        fontSize: 36,
+        // lineHeight: 24,
+        textAlign: 'center',
+        color: '#1A202C'
+    },
 });
