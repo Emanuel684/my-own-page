@@ -23,7 +23,13 @@ export default function EditScreenInfo({ path }: { path: string }) {
                         }}>
                         Emanuel Acevedo Muñoz
                     </Text>
-                    <Text>
+                    <Text style={{
+                            fontFamily: 'MPLUSRounded1c-Light',
+                            fontSize: 16,
+                            // lineHeight: 24,
+                            textAlign: 'center',
+                            color: '#1A202C'
+                        }}>
                         Digital Craftsman ( Artist / Developer / Designer )
                     </Text>
                 </View>

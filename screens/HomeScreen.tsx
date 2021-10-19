@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native';
 
 import DogGif from '../components/DogGif';
 import CardPersonal from '../components/CardPersonal';
+import WorkComponent from '../components/WorkComponent';
+import BioComponent from '../components/BioComponent';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
@@ -11,7 +13,10 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     <View style={[
       styles.container,
       {
-        backgroundColor: '#ededed'
+        backgroundColor: '#ededed',
+        width: '100%',
+        paddingLeft: 50,
+        paddingRight: 50
       }
     ]}>
       <DogGif path="/screens/TabOneScreen.tsx" />
@@ -29,6 +34,8 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       </View>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <CardPersonal path="/screens/TabOneScreen.tsx" />
+      <WorkComponent path="/screens/TabOneScreen.tsx" />
+      <BioComponent path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }
