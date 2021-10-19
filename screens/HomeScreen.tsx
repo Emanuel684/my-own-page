@@ -1,15 +1,19 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
+import DogGif from '../components/DogGif';
+import CardPersonal from '../components/CardPersonal';
 import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
-export default function TabTwoScreen() {
+export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <DogGif path="/screens/TabOneScreen.tsx" />
+      <Text style={styles.title}>Hello, I'm a full-stack developer based in Colombia!</Text>
+      <CardPersonal path="/screens/TabOneScreen.tsx"  />
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <Text style={styles.title}>Tab One</Text>
     </View>
   );
 }
@@ -19,6 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'orange'
   },
   title: {
     fontSize: 20,
