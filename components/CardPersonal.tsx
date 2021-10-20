@@ -9,17 +9,19 @@ import { Text, View } from './Themed';
 export default function EditScreenInfo({ path }: { path: string }) {
     return (
         <View style={{
-            backgroundColor: 'red'
+            // backgroundColor: 'red',
+            backgroundColor: 'transparent'
         }}>
-            <View style={styles.getStartedContainer}>
-                <View>
+            <View style={[styles.getStartedContainer,{backgroundColor: 'transparent'}]}>
+                <View style={{backgroundColor: 'transparent'}}>
                     <Text
                         style={{
                             fontFamily: 'MPLUSRounded1c-Bold',
                             fontSize: 36,
                             // lineHeight: 24,
                             textAlign: 'center',
-                            color: '#1A202C'
+                            color: '#1A202C',
+                            backgroundColor: 'transparent'
                         }}>
                         Emanuel Acevedo Muñoz
                     </Text>
@@ -28,19 +30,22 @@ export default function EditScreenInfo({ path }: { path: string }) {
                             fontSize: 16,
                             // lineHeight: 24,
                             textAlign: 'center',
-                            color: '#1A202C'
+                            color: '#1A202C',
+                            backgroundColor: 'transparent'
                         }}>
                         Digital Craftsman ( Artist / Developer / Designer )
                     </Text>
                 </View>
-                <View>
+                <View style={{
+                    backgroundColor: 'transparent'
+                }}>
                     <Image
                         style={{
-                            backgroundColor: 'red',
+                            // backgroundColor: 'red',
                             width: 100,
                             height: 100,
                             borderRadius: 100,
-                            borderWidth: 2,
+                            borderWidth: 4,
                             borderColor: 'white'
                         }}
                         source={require('../assets/images/personal/EmanuelAcevedo.jpeg')}

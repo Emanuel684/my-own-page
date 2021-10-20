@@ -3,13 +3,14 @@ import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/DogGif';
 import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
-export default function WorksScreen() {
+export default function SourceScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>WorksScreen</Text>
+      <Text style={styles.title}>SourceScreen</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
     </View>
   );
 }

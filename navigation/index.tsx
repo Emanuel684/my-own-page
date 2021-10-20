@@ -10,14 +10,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable, Text } from 'react-native';
 
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/HomeScreen';
-import TabTwoScreen from '../screens/WorksScreen';
+import HomeScreen from '../screens/HomeScreen';
+import WorksScreen from '../screens/WorksScreen';
+import PostsScreen from '../screens/PostsScreen';
+import SourceScreen from '../screens/SourceScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -51,30 +56,34 @@ function RootNavigator() {
  * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
-const BottomTab = createBottomTabNavigator<RootTabParamList>();
+// const BottomTab = createBottomTabNavigator<RootTabParamList>();
+const BottomTab = createMaterialTopTabNavigator();
 
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Emanuel Acevedo  Muñoz"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
         tabBarStyle: {
-          position: 'absolute',
-          // top: 0
+          // position: 'absolute',
+          // top: 0,
+          // backgroundColor: 'rgba(100,100,100,0.4)'
+          // backgroundColor: 'white',
+          // flexDirection: 'row'
         }
       }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Emanuel Acevedo Muñoz 1',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        name="Emanuel Acevedo  Muñoz"
+        component={HomeScreen}
+        options={() => ({
+          title: 'Emanuel Acevedo Muñoz',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="react" size={24} color="black" />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Modal')}
+              // onPress={() => navigation.navigate('Modal')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
@@ -87,14 +96,64 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
+        // options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+        //   title: 'Emanuel Acevedo Muñoz 1',
+        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        //   headerRight: () => (
+        //     <Pressable
+        //       onPress={() => navigation.navigate('Modal')}
+        //       style={({ pressed }) => ({
+        //         opacity: pressed ? 0.5 : 1,
+        //       })}>
+        //       <FontAwesome
+        //         name="info-circle"
+        //         size={25}
+        //         color={Colors[colorScheme].text}
+        //         style={{ marginRight: 15 }}
+        //       />
+        //     </Pressable>
+        //   ),
+        // })}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
-        options={{
-          title: 'Emanuel Acevedo Muñoz 2',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+        name="Works"
+        component={WorksScreen}
+        // options={{
+        //   title: 'Emanuel Acevedo Muñoz 2',
+        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        // }}
+      />
+
+      <BottomTab.Screen
+        name="Posts"
+        component={PostsScreen}
+        // options={{
+        //   title: 'Emanuel Acevedo Muñoz 2',
+        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        // }}
+      />
+
+      <BottomTab.Screen
+        name="Source"
+        component={SourceScreen}
+        options={() => ({
+          title: 'Source',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="github" size={24} color="black" />,
+          headerRight: () => (
+            <Pressable
+              // onPress={() => navigation.navigate('Modal')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="info-circle"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginRight: 15 }}
+              />
+            </Pressable>
+          ),
+        })}
       />
     </BottomTab.Navigator>
   );
