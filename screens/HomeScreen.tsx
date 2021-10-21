@@ -5,6 +5,8 @@ import DogGif from '../components/DogGif';
 import CardPersonal from '../components/CardPersonal';
 import WorkComponent from '../components/WorkComponent';
 import BioComponent from '../components/BioComponent';
+import SocialMediaComponent from '../components/SocialMediaComponent';
+import FooterComponent from '../components/FooterComponent';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
@@ -23,10 +25,10 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
           paddingRight: 50
         }
       ]}>
-        {/* <DogGif path="/screens/TabOneScreen.tsx" /> */}
+        <DogGif path="/screens/TabOneScreen.tsx" />
         <View>
-        {/* <ShowDonutComponent /> */}
-        <App />
+          {/* <ShowDonutComponent /> */}
+          {/* <App /> */}
         </View>
         <View style={{
           backgroundColor: 'white',
@@ -44,12 +46,10 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         <CardPersonal path="/screens/TabOneScreen.tsx" />
         <WorkComponent path="/screens/TabOneScreen.tsx" />
         <BioComponent path="/screens/TabOneScreen.tsx" />
-
-        <WorkComponent path="/screens/TabOneScreen.tsx" />
-        <BioComponent path="/screens/TabOneScreen.tsx" /><WorkComponent path="/screens/TabOneScreen.tsx" />
-        <BioComponent path="/screens/TabOneScreen.tsx" /><WorkComponent path="/screens/TabOneScreen.tsx" />
-        <BioComponent path="/screens/TabOneScreen.tsx" />
+        <SocialMediaComponent path="/screens/TabOneScreen.tsx" />
+        <FooterComponent path="/screens/TabOneScreen.tsx" />
       </View>
+
     </ScrollView>
   );
 }

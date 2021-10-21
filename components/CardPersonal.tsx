@@ -12,9 +12,10 @@ export default function EditScreenInfo({ path }: { path: string }) {
             // backgroundColor: 'red',
             backgroundColor: 'transparent'
         }}>
-            <View style={[styles.getStartedContainer,{backgroundColor: 'transparent'}]}>
-                <View style={{backgroundColor: 'transparent'}}>
+            <View style={[styles.getStartedContainer, { backgroundColor: 'transparent' }]}>
+                <View style={{ backgroundColor: 'transparent' }}>
                     <Text
+                        selectable={false}
                         style={{
                             fontFamily: 'MPLUSRounded1c-Bold',
                             fontSize: 36,
@@ -25,7 +26,9 @@ export default function EditScreenInfo({ path }: { path: string }) {
                         }}>
                         Emanuel Acevedo Muñoz
                     </Text>
-                    <Text style={{
+                    <Text
+                        selectable={false}
+                        style={{
                             fontFamily: 'MPLUSRounded1c-Light',
                             fontSize: 16,
                             // lineHeight: 24,

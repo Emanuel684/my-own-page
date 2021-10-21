@@ -64,7 +64,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Emanuel Acevedo  Muñoz"
+      initialRouteName="one"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
         tabBarStyle: {
@@ -82,55 +82,57 @@ function BottomTabNavigator() {
           title: 'Emanuel Acevedo Muñoz',
           tabBarIcon: ({ color }) => <FontAwesome5 name="react" size={24} color="black" />,
           headerRight: () => (
-            <Pressable
+            <a
               // onPress={() => navigation.navigate('Modal')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
+              // style={({ pressed }) => ({
+              //   opacity: pressed ? 0.5 : 1,
+              // })}
+              href="https://github.com/Emanuel684"
+            >
               <FontAwesome
                 name="info-circle"
                 size={25}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
               />
-            </Pressable>
+            </a>
           ),
         })}
-        // options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-        //   title: 'Emanuel Acevedo Muñoz 1',
-        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        //   headerRight: () => (
-        //     <Pressable
-        //       onPress={() => navigation.navigate('Modal')}
-        //       style={({ pressed }) => ({
-        //         opacity: pressed ? 0.5 : 1,
-        //       })}>
-        //       <FontAwesome
-        //         name="info-circle"
-        //         size={25}
-        //         color={Colors[colorScheme].text}
-        //         style={{ marginRight: 15 }}
-        //       />
-        //     </Pressable>
-        //   ),
-        // })}
+      // options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
+      //   title: 'Emanuel Acevedo Muñoz 1',
+      //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+      //   headerRight: () => (
+      //     <Pressable
+      //       onPress={() => navigation.navigate('Modal')}
+      //       style={({ pressed }) => ({
+      //         opacity: pressed ? 0.5 : 1,
+      //       })}>
+      //       <FontAwesome
+      //         name="info-circle"
+      //         size={25}
+      //         color={Colors[colorScheme].text}
+      //         style={{ marginRight: 15 }}
+      //       />
+      //     </Pressable>
+      //   ),
+      // })}
       />
       <BottomTab.Screen
         name="Works"
         component={WorksScreen}
-        // options={{
-        //   title: 'Emanuel Acevedo Muñoz 2',
-        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        // }}
+      // options={{
+      //   title: 'Emanuel Acevedo Muñoz 2',
+      //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+      // }}
       />
 
       <BottomTab.Screen
         name="Posts"
         component={PostsScreen}
-        // options={{
-        //   title: 'Emanuel Acevedo Muñoz 2',
-        //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        // }}
+      // options={{
+      //   title: 'Emanuel Acevedo Muñoz 2',
+      //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+      // }}
       />
 
       <BottomTab.Screen
@@ -141,7 +143,7 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <FontAwesome5 name="github" size={24} color="black" />,
           headerRight: () => (
             <Pressable
-              // onPress={() => navigation.navigate('Modal')}
+              onPress={() => console.log("a")}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>

@@ -20,11 +20,10 @@ export default function EditScreenInfo({ path }: { path: string }) {
                     fontSize: 20,
                     borderBottomWidth: 4,
                     fontFamily: 'MPLUSRounded1c-Medium',
-                    width: 50,
                     borderColor: '#1A202C',
                     backgroundColor: 'transparent'
                 }}>
-                Work
+                On the web
             </Text>
             <Text
                 selectable={false}
@@ -63,7 +62,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
                             fontSize: 16,
                             fontFamily: 'MPLUSRounded1c-Medium'
                         }}>
-                        My portafolio
+                        Popular posts
                     </Text>
                     <AntDesign
                         selectable={false}

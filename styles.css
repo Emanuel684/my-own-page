@@ -1,9 +1,13 @@
+body {
+  background-color: '#ededed';
+}
+
 body ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
   }
   
-  body ::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 7px;
-  }
+body ::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 7px;
+}

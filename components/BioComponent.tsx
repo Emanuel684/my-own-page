@@ -14,6 +14,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
             backgroundColor: 'transparent'
         }}>
             <Text
+                selectable={false}
                 style={{
                     fontSize: 20,
                     // lineHeight: 24,
@@ -25,14 +26,16 @@ export default function EditScreenInfo({ path }: { path: string }) {
                 }}>
                 Bio
             </Text>
-            <Text style={{
-                marginTop: 10,
-                marginBottom: 10,
-                fontSize: 16,
-                fontFamily: 'MPLUSRounded1c-Light',
-                borderColor: '#1A202C',
-                backgroundColor: 'transparent'
-            }}>
+            <Text
+                selectable={false}
+                style={{
+                    marginTop: 10,
+                    marginBottom: 10,
+                    fontSize: 16,
+                    fontFamily: 'MPLUSRounded1c-Light',
+                    borderColor: '#1A202C',
+                    backgroundColor: 'transparent'
+                }}>
                 Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
             </Text>
         </View>
