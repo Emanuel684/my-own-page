@@ -1,9 +1,34 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import { Text, View } from './Themed';
 
 export default function SoftwareRepository({ path }: { path: string }) {
+
+    const [repoData, setRepoData] = useState([]) as any;
+
+    const getData = () => {
+
+        const RepoData = axios.get('https://api.github.com/users/Emanuel684/repos')
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+          .then(function () {
+            // always executed
+          }); 
+
+          console.log("data", RepoData.data);
+          setRepoData(RepoData)
+
+    }
+
+    useEffect(() => {
+        getData();
+    }, [])
+
     return (
         <View style={{
             backgroundColor: 'transparent'
@@ -23,6 +48,9 @@ export default function SoftwareRepository({ path }: { path: string }) {
                 backgroundColor: 'orange',
                 marginTop: 10
             }}>
+                {/* {
+                    data.map(  )
+                } */}
                 <table>
                     <tr>
                         <th>Title</th>
