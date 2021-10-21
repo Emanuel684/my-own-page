@@ -17,14 +17,29 @@ const linking: LinkingOptions<RootStackParamList> = {
         screens: {
           Home: {
             screens: {
-              HomeScreen: 'one',
+              HomeScreen: 'home',
             },
           },
           Works: {
             screens: {
-              WorksScreens: 'two',
+              WorksScreens: 'works',
             },
           },
+          Posts: {
+            screens: {
+              Posts: 'posts'
+            }
+          },
+          Source: {
+            screens: {
+              Source: 'source'
+            }
+          },
+          Contact: {
+            screens: {
+              Contact: 'contact'
+            }
+          }
         },
       },
       Modal: 'modal',
