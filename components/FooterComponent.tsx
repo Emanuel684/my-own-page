@@ -6,7 +6,7 @@ import { Text, View } from './Themed';
 export default function FooterComponent({ path }: { path: string }) {
     return (
         <View style={{
-            // backgroundColor: '#ededed',
+            backgroundColor: '#ededed',
             // backgroundColor: 'green',
             // position: 'absolute',
             // bottom: 0,

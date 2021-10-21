@@ -1,17 +1,21 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 
 import EditScreenInfo from '../components/DogGif';
+import SoftwareRepository from '../components/SoftwareRepository';
+import FooterComponent from '../components/FooterComponent';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
 export default function SourceScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>SourceScreen</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+        <SoftwareRepository path="/screens/TabTwoScreen.tsx" />
+        <FooterComponent path="/screens/TabTwoScreen.tsx" />
+      </View>
+    </ScrollView>
   );
 }
 

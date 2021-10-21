@@ -20,6 +20,7 @@ import HomeScreen from '../screens/HomeScreen';
 import WorksScreen from '../screens/WorksScreen';
 import PostsScreen from '../screens/PostsScreen';
 import SourceScreen from '../screens/SourceScreen';
+import ContactScreen from '../screens/ContactScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -156,6 +157,29 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
+      />
+
+      <BottomTab.Screen
+        name="Contact"
+        component={ContactScreen}
+        // options={() => ({
+        //   title: 'Source',
+        //   tabBarIcon: ({ color }) => <FontAwesome5 name="github" size={24} color="black" />,
+        //   headerRight: () => (
+        //     <Pressable
+        //       onPress={() => console.log("a")}
+        //       style={({ pressed }) => ({
+        //         opacity: pressed ? 0.5 : 1,
+        //       })}>
+        //       <FontAwesome
+        //         name="info-circle"
+        //         size={25}
+        //         color={Colors[colorScheme].text}
+        //         style={{ marginRight: 15 }}
+        //       />
+        //     </Pressable>
+        //   ),
+        // })}
       />
     </BottomTab.Navigator>
   );

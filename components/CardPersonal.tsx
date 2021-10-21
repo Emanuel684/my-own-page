@@ -10,10 +10,11 @@ export default function EditScreenInfo({ path }: { path: string }) {
     return (
         <View style={{
             // backgroundColor: 'red',
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+           flex: 1
         }}>
-            <View style={[styles.getStartedContainer, { backgroundColor: 'transparent' }]}>
-                <View style={{ backgroundColor: 'transparent' }}>
+            <View style={[styles.getStartedContainer, { backgroundColor: 'transparent', flex: 1}]}>
+                <View style={{ backgroundColor: 'transparent', flex: 1 }}>
                     <Text
                         selectable={false}
                         style={{

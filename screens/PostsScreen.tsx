@@ -9,38 +9,63 @@ import { RootTabScreenProps } from '../types';
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <ScrollView>
-      <View style={[styles.container, { backgroundColor: '#ededed', }]}>
+      <View style={[styles.container, { backgroundColor: '#ededed', width: '100%', }]}>
         <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+        <Text
+          selectable={false}
+          style={{
+            fontSize: 20,
+            color: '#1A202C',
+            alignSelf: 'flex-start',
+            fontFamily: 'MPLUSRounded1c-Bold'
+          }}>
+          Works
+        </Text>
         <View style={{
-          flex: 1
+          backgroundColor: 'transparent',
+          padding: 10,
+          width: 249,
+          height: 241,
         }}>
-          <Text>
-            Works
-          </Text>
-          <View style={{
-            backgroundColor: 'red',
+          <Image style={{
             width: 239,
             height: 133,
-          }}>
-            <Image style={{
-              width: 239,
-              height: 133,
-              borderRadius: 10
+            alignSelf: 'center',
+            borderRadius: 10
+          }}
+            source={{ uri: 'https://www.craftz.dog/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fworks%2Finkdrop_eyecatch.e5148a4760950d74f545dec50aa87cfd.png&w=750&q=75' }}
+          />
+          <View
+            style={{
+              backgroundColor: 'transparent'
             }}
-              source={{ uri: 'https://www.craftz.dog/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Fworks%2Finkdrop_eyecatch.e5148a4760950d74f545dec50aa87cfd.png&w=750&q=75' }}
-            />
-            <View>
-              <Text>
-                Inkdrop
-              </Text>
-              <Text>
-                A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support
-              </Text>
-            </View>
+          >
+            <Text
+              selectable={false}
+              style={{
+                textAlign: 'center',
+                fontSize: 20,
+                color: '#1A202C'
+              }}>
+              Inkdrop
+            </Text>
+            <Text
+              selectable={false}
+              style={{
+                textAlign: 'center',
+                fontSize: 14,
+                color: '#1A202C'
+              }}>
+              A Markdown note-taking app with 100+ plugins, cross-platform and encrypted data sync support
+            </Text>
           </View>
         </View>
       </View>
-      <FooterComponent path="/screens/TabOneScreen.tsx" />
+      <View style={{
+        position: 'relative'
+      }}>
+        <FooterComponent path="/screens/TabOneScreen.tsx" />
+      </View>
     </ScrollView>
   );
 }
