@@ -8,7 +8,13 @@ import { Text, View } from '../components/Themed';
 export default function WorksScreen() {
   return (
     <ScrollView>
-      <View style={[styles.container, { backgroundColor: '#ededed', width: '100%', }]}>
+      <View style={[
+        styles.container,
+        {
+          backgroundColor: 'transparent',
+          width: '100%'
+        }
+      ]}>
         <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
         <Text
           selectable={false}

@@ -1,14 +1,9 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import CustomButton from './CustomButton';
-
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function BioComponent({ path }: { path: string }) {
     return (
         <View style={{
             backgroundColor: 'transparent'
@@ -17,10 +12,9 @@ export default function EditScreenInfo({ path }: { path: string }) {
                 selectable={false}
                 style={{
                     fontSize: 20,
-                    // lineHeight: 24,
                     borderBottomWidth: 4,
                     fontFamily: 'MPLUSRounded1c-Medium',
-                    width: 50,
+                    width: 35,
                     borderColor: '#1A202C',
                     backgroundColor: 'transparent'
                 }}>

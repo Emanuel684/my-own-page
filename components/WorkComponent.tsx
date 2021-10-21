@@ -1,15 +1,12 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import CustomButton from './CustomButton';
 import { AntDesign } from '@expo/vector-icons';
 
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function WorkComponent({ path }: { path: string }) {
     return (
         <View style={{
             backgroundColor: 'transparent'

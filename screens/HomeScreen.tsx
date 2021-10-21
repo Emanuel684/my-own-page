@@ -10,26 +10,23 @@ import FooterComponent from '../components/FooterComponent';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-// import ShowDonutComponent from "../donut/ShowDonut"
-import App from '../3dObject/App';
-
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function HomeScreen({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <ScrollView>
       <View style={[
         styles.container,
         {
-          backgroundColor: '#ededed',
+          // backgroundColor: '#ededed',
+          backgroundColor: 'transparent',
           width: '100%',
+          marginBottom: 20,
+          marginTop: 30,
           paddingLeft: 50,
           paddingRight: 50
         }
       ]}>
         <DogGif path="/screens/TabOneScreen.tsx" />
-        <View>
-          {/* <ShowDonutComponent /> */}
-          {/* <App /> */}
-        </View>
+
         <View style={{
           backgroundColor: 'white',
           borderRadius: 10,
@@ -42,14 +39,12 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
             textAlign: 'center'
           }}>Hello, I'm a full-stack developer based in Colombia!</Text>
         </View>
-        {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
         <CardPersonal path="/screens/TabOneScreen.tsx" />
         <WorkComponent path="/screens/TabOneScreen.tsx" />
         <BioComponent path="/screens/TabOneScreen.tsx" />
         <SocialMediaComponent path="/screens/TabOneScreen.tsx" />
-        <FooterComponent path="/screens/TabOneScreen.tsx" />
       </View>
-
+      <FooterComponent path="/screens/TabOneScreen.tsx" />
     </ScrollView>
   );
 }
@@ -59,7 +54,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: 'orange'
   },
   title: {
     fontSize: 20,

@@ -1,26 +1,21 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function CardPersonal({ path }: { path: string }) {
     return (
         <View style={{
-            // backgroundColor: 'red',
             backgroundColor: 'transparent',
-           flex: 1
+            flex: 1
         }}>
-            <View style={[styles.getStartedContainer, { backgroundColor: 'transparent', flex: 1}]}>
+            <View style={[styles.getStartedContainer, { backgroundColor: 'transparent', flex: 1 }]}>
                 <View style={{ backgroundColor: 'transparent', flex: 1 }}>
                     <Text
                         selectable={false}
                         style={{
                             fontFamily: 'MPLUSRounded1c-Bold',
                             fontSize: 36,
-                            // lineHeight: 24,
                             textAlign: 'center',
                             color: '#1A202C',
                             backgroundColor: 'transparent'
@@ -32,7 +27,6 @@ export default function EditScreenInfo({ path }: { path: string }) {
                         style={{
                             fontFamily: 'MPLUSRounded1c-Light',
                             fontSize: 16,
-                            // lineHeight: 24,
                             textAlign: 'center',
                             color: '#1A202C',
                             backgroundColor: 'transparent'
@@ -45,7 +39,6 @@ export default function EditScreenInfo({ path }: { path: string }) {
                 }}>
                     <Image
                         style={{
-                            // backgroundColor: 'red',
                             width: 100,
                             height: 100,
                             borderRadius: 100,
@@ -68,7 +61,6 @@ const styles = StyleSheet.create({
     },
     getStartedText: {
         fontSize: 36,
-        // lineHeight: 24,
         textAlign: 'center',
         color: '#1A202C'
     },

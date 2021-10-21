@@ -7,7 +7,7 @@ import FooterComponent from '../components/FooterComponent';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function SourceScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function SourceScreen({ navigation }: RootTabScreenProps<'Source'>) {
   return (
     <ScrollView>
       <View style={styles.container}>

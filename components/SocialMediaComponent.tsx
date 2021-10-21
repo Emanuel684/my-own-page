@@ -1,15 +1,12 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import CustomButton from './CustomButton';
 import { AntDesign } from '@expo/vector-icons';
 
-import Colors from '../constants/Colors';
-import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function SocialMediaComponent({ path }: { path: string }) {
     return (
         <View style={{
             backgroundColor: 'transparent'
@@ -21,6 +18,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
                     borderBottomWidth: 4,
                     fontFamily: 'MPLUSRounded1c-Medium',
                     borderColor: '#1A202C',
+                    width: 120,
                     backgroundColor: 'transparent'
                 }}>
                 On the web
@@ -80,7 +78,6 @@ const styles = StyleSheet.create({
     getStartedContainer: {
         alignItems: 'center',
         marginHorizontal: 50,
-        // backgroundColor: 'brown'
     },
     getStartedText: {
         fontSize: 17,
