@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { DataTable } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
 
 import { Text, View } from './Themed';
 
@@ -9,29 +11,28 @@ export default function SoftwareRepository({ path }: { path: string }) {
 
     const getData = () => {
 
-        const RepoData = axios.get('https://api.github.com/users/Emanuel684/repos')
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
-          .then(function () {
-            // always executed
-          }); 
-
-          console.log("data", RepoData.data);
-          setRepoData(RepoData)
+        axios.get('https://api.github.com/users/Emanuel684/repos')
+            .then(function (response) {
+                console.log("response", response.data);
+                setRepoData(response.data)
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
 
     }
 
     useEffect(() => {
         getData();
-    }, [])
+    }, []);
 
     return (
         <View style={{
-            backgroundColor: 'transparent'
+            backgroundColor: 'transparent',
+            width: '90%'
         }}>
             <Text
                 selectable={false}
@@ -48,42 +49,53 @@ export default function SoftwareRepository({ path }: { path: string }) {
                 backgroundColor: 'orange',
                 marginTop: 10
             }}>
-                {/* {
-                    data.map(  )
-                } */}
-                <table>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Lenguage</th>
-                        <th>Created at</th>
-                        <th>Forks</th>
-                        <th>Open Issues</th>
-                        <th>Size (kb)</th>
-                        <th>Stars</th>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Germany</td>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Germany</td>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>Germany</td>
-                    </tr>
-                </table>
+                <View
+                style={{
+                    width: '100%'
+                }}
+                >
+                    <DataTable style={{
+                        width: '90%',
+                        alignSelf: 'center'
+                    }}>
+                        <DataTable.Header>
+                            {/* <DataTable.Title numeric>Age</DataTable.Title> */}
+                            <DataTable.Title >Title</DataTable.Title>
+                            <DataTable.Title>Description</DataTable.Title>
+                            <DataTable.Title>Lenguage</DataTable.Title>
+                            <DataTable.Title>Created at</DataTable.Title>
+                            <DataTable.Title>Forks</DataTable.Title>
+                            <DataTable.Title>Open Issues</DataTable.Title>
+                            <DataTable.Title>Size (kb)</DataTable.Title>
+                            <DataTable.Title>Clone url</DataTable.Title>
+                        </DataTable.Header>
+
+                        {
+                            repoData.map((i: any, index: number) => {
+                                return (
+                                    <DataTable.Row key={index}>
+                                        <DataTable.Cell>{i.name}</DataTable.Cell>
+                                        <DataTable.Cell>{i.description}</DataTable.Cell>
+                                        <DataTable.Cell>{i.language}</DataTable.Cell>
+                                        <DataTable.Cell>{i.created_at}</DataTable.Cell>
+                                        <DataTable.Cell>{i.forks}</DataTable.Cell>
+                                        <DataTable.Cell>{i.open_issues}</DataTable.Cell>
+                                        <DataTable.Cell>{i.size}</DataTable.Cell>
+                                        <DataTable.Cell>{i.clone_url}</DataTable.Cell>
+                                    </DataTable.Row>
+                                )
+                            })
+                        }
+
+                    </DataTable>
+                </View>
             </View>
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
+    head: { height: 40, backgroundColor: '#f1f8ff' },
+    text: { margin: 6 }
+});
