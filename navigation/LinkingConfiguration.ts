@@ -39,6 +39,11 @@ const linking: LinkingOptions<RootStackParamList> = {
             screens: {
               Contact: 'contact'
             }
+          },
+          CurriculumVitaeScreen: {
+            screens: {
+              CurriculumVitaeScreen: 'curriculum'
+            }
           }
         },
       },

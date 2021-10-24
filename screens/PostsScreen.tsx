@@ -11,16 +11,21 @@ export default function PostsScreen({ navigation }: RootTabScreenProps<'Posts'>)
     <ScrollView>
       <View style={[styles.container, { backgroundColor: '#ededed', width: '100%', }]}>
         <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-        <Text
-          selectable={false}
-          style={{
-            fontSize: 20,
-            color: '#1A202C',
-            alignSelf: 'flex-start',
-            fontFamily: 'MPLUSRounded1c-Bold'
-          }}>
-          Works
-        </Text>
+        <View style={{
+          width: '70%',
+          backgroundColor: 'transparent'
+        }}>
+          <Text
+            selectable={false}
+            style={{
+              fontSize: 20,
+              color: '#1A202C',
+              alignSelf: 'flex-start',
+              fontFamily: 'MPLUSRounded1c-Bold'
+            }}>
+            Posts
+          </Text>
+        </View>
         <View style={{
           backgroundColor: 'transparent',
           padding: 10,
@@ -60,10 +65,6 @@ export default function PostsScreen({ navigation }: RootTabScreenProps<'Posts'>)
             </Text>
           </View>
         </View>
-      </View>
-      <View style={{
-        position: 'relative'
-      }}>
         <FooterComponent path="/screens/TabOneScreen.tsx" />
       </View>
     </ScrollView>

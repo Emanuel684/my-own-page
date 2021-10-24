@@ -13,7 +13,6 @@ export default function SoftwareRepository({ path }: { path: string }) {
 
         axios.get('https://api.github.com/users/Emanuel684/repos')
             .then(function (response) {
-                console.log("response", response.data);
                 setRepoData(response.data)
             })
             .catch(function (error) {
@@ -46,17 +45,19 @@ export default function SoftwareRepository({ path }: { path: string }) {
                 Software Repository
             </Text>
             <View style={{
-                backgroundColor: 'orange',
+                backgroundColor: 'transparent',
                 marginTop: 10
             }}>
                 <View
                 style={{
-                    width: '100%'
+                    width: '100%',
+                    backgroundColor: 'transparent'
                 }}
                 >
                     <DataTable style={{
                         width: '90%',
-                        alignSelf: 'center'
+                        alignSelf: 'center',
+                        backgroundColor: '#ededed'
                     }}>
                         <DataTable.Header>
                             {/* <DataTable.Title numeric>Age</DataTable.Title> */}

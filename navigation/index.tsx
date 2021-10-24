@@ -21,6 +21,7 @@ import WorksScreen from '../screens/WorksScreen';
 import PostsScreen from '../screens/PostsScreen';
 import SourceScreen from '../screens/SourceScreen';
 import ContactScreen from '../screens/ContactScreen';
+import CurriculumVitaeScreen from '../screens/CurriculumVitae';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -118,7 +119,7 @@ function BottomTabNavigator() {
       //   ),
       // })}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="works"
         component={WorksScreen}
         options={() => ({
@@ -141,15 +142,40 @@ function BottomTabNavigator() {
           //   </a>
           // ),
         })}
-      />
+      /> */}
 
+<BottomTab.Screen
+        name="CurriculumVitaeScreen"
+        component={CurriculumVitaeScreen}
+        options={() => ({
+          title: 'Curriculum Vitae',
+          // tabBarIcon: ({ color }) => <FontAwesome5 name="react" size={24} color="black" />,
+          // headerRight: () => (
+          //   <a
+          //     // onPress={() => navigation.navigate('Modal')}
+          //     // style={({ pressed }) => ({
+          //     //   opacity: pressed ? 0.5 : 1,
+          //     // })}
+          //     href="https://github.com/Emanuel684"
+          //   >
+          //     <FontAwesome
+          //       name="info-circle"
+          //       size={25}
+          //       color={Colors[colorScheme].text}
+          //       style={{ marginRight: 15 }}
+          //     />
+          //   </a>
+          // ),
+        })}
+      />
+{/* 
       <BottomTab.Screen
         name="posts"
         component={PostsScreen}
         options={() => ({
           title: 'Posts'
         })}
-      />
+      /> */}
 
       <BottomTab.Screen
         name="source"

@@ -30,6 +30,7 @@ export type RootTabParamList = {
   Posts: undefined;
   Source: undefined;
   Contact: undefined;
+  CurriculumVitaeScreen: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
