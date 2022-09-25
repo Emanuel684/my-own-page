@@ -33,7 +33,7 @@ export default function WorkComponent({ path }: { path: string }) {
                     borderColor: '#1A202C',
                     backgroundColor: 'transparent'
                 }}>
-                Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
+                Focused, productive, competent and humanity are the most outstanding characteristics of my personality; junior web backend developed at Academia Geek, technical baccalaureate in software development at Jaime Izasa Cadavid polytechnic, so I seek to develop software to improve people's quality of life and my skills as a worker.
             </Text>
 
             <CustomButton
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
     getStartedContainer: {
         alignItems: 'center',
         marginHorizontal: 50,
-        // backgroundColor: 'brown'
     },
     getStartedText: {
         fontSize: 17,

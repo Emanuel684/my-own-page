@@ -30,7 +30,7 @@ export default function BioComponent({ path }: { path: string }) {
                     borderColor: '#1A202C',
                     backgroundColor: 'transparent'
                 }}>
-                Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
+                Data Science Engineering Student | Passionate About Data Science & Data Analytics | Software Developer | Full Stack Developer.
             </Text>
         </View>
     );
@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
     getStartedContainer: {
         alignItems: 'center',
         marginHorizontal: 50,
-        // backgroundColor: 'brown'
     },
     getStartedText: {
         fontSize: 17,

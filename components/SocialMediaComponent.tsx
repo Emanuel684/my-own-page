@@ -33,7 +33,31 @@ export default function SocialMediaComponent({ path }: { path: string }) {
                     borderColor: '#1A202C',
                     backgroundColor: 'transparent'
                 }}>
-                Takuya is a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
+                https://www.linkedin.com/in/emanuel-acevedo-mu%C3%B1oz-1b062b204/
+            </Text>
+            <Text
+                selectable={false}
+                style={{
+                    marginTop: 10,
+                    marginBottom: 10,
+                    fontSize: 16,
+                    fontFamily: 'MPLUSRounded1c-Light',
+                    borderColor: '#1A202C',
+                    backgroundColor: 'transparent'
+                }}>
+                https://www.hackerrank.com/emanuelacag
+            </Text>
+            <Text
+                selectable={false}
+                style={{
+                    marginTop: 10,
+                    marginBottom: 10,
+                    fontSize: 16,
+                    fontFamily: 'MPLUSRounded1c-Light',
+                    borderColor: '#1A202C',
+                    backgroundColor: 'transparent'
+                }}>
+                https://twitter.com/ElEmaneitor
             </Text>
 
             <CustomButton

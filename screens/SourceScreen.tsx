@@ -11,7 +11,6 @@ export default function SourceScreen({ navigation }: RootTabScreenProps<'Source'
   return (
     <ScrollView>
       <View style={[styles.container, {backgroundColor: '#ededed'}]}>
-        <EditScreenInfo path="/screens/TabOneScreen.tsx" />
         <SoftwareRepository path="/screens/TabTwoScreen.tsx" />
         <FooterComponent path="/screens/TabTwoScreen.tsx" />
       </View>

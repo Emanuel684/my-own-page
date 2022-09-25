@@ -5,16 +5,24 @@ import { View } from './Themed';
 
 export default function DogGif({ path }: { path: string }) {
   return (
-    <View>
-      <View style={[styles.getStartedContainer, { backgroundColor: 'transparent' }]}>
-        <Image
-          style={{
-            width: 500,
-            height: 500
-          }}
-          source={require('../assets/images/DogOffice/DogOffice.png')}
-        />
-      </View>
+    <View style={{
+      backgroundColor: 'transparent',
+      marginBottom: 10
+  }}>
+      <View style={{
+                    backgroundColor: 'transparent'
+                }}>
+                    <Image
+                        style={{
+                          width: 500,
+                          height: 500,
+                          borderRadius: 100,
+                          borderWidth: 4,
+                          borderColor: 'white'
+                        }}
+                        source={require('../assets/images/personal/EmanuelAcevedo.jpeg')}
+                    />
+                </View>
     </View>
   );
 }

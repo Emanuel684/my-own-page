@@ -31,22 +31,8 @@ export default function CardPersonal({ path }: { path: string }) {
                             color: '#1A202C',
                             backgroundColor: 'transparent'
                         }}>
-                        Digital Craftsman ( Artist / Developer / Designer )
+                        Software Developer (Python Developer)
                     </Text>
-                </View>
-                <View style={{
-                    backgroundColor: 'transparent'
-                }}>
-                    <Image
-                        style={{
-                            width: 100,
-                            height: 100,
-                            borderRadius: 100,
-                            borderWidth: 4,
-                            borderColor: 'white'
-                        }}
-                        source={require('../assets/images/personal/EmanuelAcevedo.jpeg')}
-                    />
                 </View>
             </View>
         </View>
